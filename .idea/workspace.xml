@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e664bbcd-61a4-4a0e-aba9-5be750299803" name="Default" comment="" />
-    <file path="/Dummy.txt" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380101942278" ignored="false" />
+    <list default="true" id="e664bbcd-61a4-4a0e-aba9-5be750299803" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/settings.py" afterPath="$PROJECT_DIR$/crm/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <file path="/Dummy.txt" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380101964027" ignored="false" />
     <file path="/README.md" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380078832870" ignored="false" />
     <file path="/urls.py" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380092876721" ignored="false" />
-    <file path="/settings.py" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380101219743" ignored="false" />
+    <file path="/settings.py" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380102531061" ignored="false" />
     <file path="/a.dummy" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380101521136" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +32,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crm/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="10" selection-start="82" selection-end="82" vertical-scroll-proportion="0.33426183">
+            <state line="9" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.26183844">
               <folding />
             </state>
           </provider>
@@ -388,7 +391,11 @@
       <created>1380101945307</created>
       <updated>1380101945307</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="install mysql">
+      <created>1380101966246</created>
+      <updated>1380101966246</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -420,12 +427,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.68235296" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7630252" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2659091" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4554622" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30756304" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -477,7 +484,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="test username1" />
+    <option name="LAST_COMMIT_MESSAGE" value="install mysql" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -495,6 +502,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="test username" />
     <MESSAGE value="test username1" />
+    <MESSAGE value="install mysql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -580,7 +588,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crm/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="82" selection-end="82" vertical-scroll-proportion="0.33426183">
+        <state line="9" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.26183844">
           <folding />
         </state>
       </provider>
