@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e664bbcd-61a4-4a0e-aba9-5be750299803" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/settings.py" afterPath="$PROJECT_DIR$/crm/settings.py" />
+    <list default="true" id="e664bbcd-61a4-4a0e-aba9-5be750299803" name="Default" comment="install sqlite &#10;sycndb">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sqlite3.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <file path="/Dummy.txt" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380101964027" ignored="false" />
+    <file path="/Dummy.txt" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380103201550" ignored="false" />
     <file path="/README.md" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380078832870" ignored="false" />
     <file path="/urls.py" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380092876721" ignored="false" />
     <file path="/settings.py" changelist="e664bbcd-61a4-4a0e-aba9-5be750299803" time="1380102531061" ignored="false" />
@@ -395,7 +396,11 @@
       <created>1380101966246</created>
       <updated>1380101966246</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="install sqlite &#10;sycndb">
+      <created>1380103172803</created>
+      <updated>1380103172803</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -484,7 +489,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="install mysql" />
+    <option name="LAST_COMMIT_MESSAGE" value="install sqlite &#10;sycndb" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -503,6 +508,7 @@
     <MESSAGE value="test username" />
     <MESSAGE value="test username1" />
     <MESSAGE value="install mysql" />
+    <MESSAGE value="install sqlite &#10;sycndb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
