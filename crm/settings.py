@@ -88,7 +88,7 @@ SECRET_KEY = '=&3h(n9h=_e(odd041o9977ke1fe$p)i7ez1j_zlur3=r7c1+m'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+#     'django.templates.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,11 +105,12 @@ ROOT_URLCONF = 'crm.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'crm.wsgi.application'
-
+import os
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(os.path.dirname(__file__),'templates').replace('\\','/'),
 )
 
 INSTALLED_APPS = (
