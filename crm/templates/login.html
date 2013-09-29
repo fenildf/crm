@@ -44,23 +44,17 @@
     </style>
 
  </head>
-
   <body>
-
     <div class="container">
-
-      <form class="form-signin">
+      <form class="form-signin" action="{% url "hycrm.views.login_view" %}" method='post' >
         <h2 class="form-signin-heading">用户登陆</h2>
-        <input type="text" class="input-block-level" placeholder="用户名">
-        <input type="password" class="input-block-level" placeholder="密码">
+        <input name='username' type="text" class="input-block-level" placeholder="用户名">
+        <input name='password' type="password" class="input-block-level" placeholder="密码">
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> 记住
         </label>
-		<a class="btn btn-large btn-primary" href="index.html">登陆</a>
-          <form >
-		
+		<button class="btn" type="submit">登录</button>  	
       </form>
-
     </div> <!-- /container -->
 
 
