@@ -12,13 +12,8 @@ def login_view(request):
     user = authenticate(username=request.POST['username'], password=request.POST['password'])
     if user is not None:
         login(request, user)
-
-    if user.username == "lwy":
-        # return render_to_response('user_model.html',{'username':'lwy'})
         model_list = get_user_display_model(user.username)
-        return render_to_response('user_model.html', {'username':'lwy','model_list': model_list})
-    else:
-        return render_to_response('main.html',{'username':'admin'})
+        return render_to_response('user_model.html', {'username':user.username,'model_list': model_list})
 
 def denglu(request):
     return  HttpResponse("denglule")
