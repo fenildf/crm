@@ -22,7 +22,8 @@
 
     <div class="container">
 
-      <form class="form-signin" action="{% url "hycrm.views.login_view" %}" method='post'>
+{#      <form class="form-signin" herf="{{ login }} " method='post'>#}
+          <form class="form-signin" action="{% url "hycrm.views.main_view" %}" method='post'>
         <h2 class="form-signin-heading">用户登入</h2>
         <input name='username' type="text" class="form-control" placeholder="用户" autofocus>
         <input name='password' type="password" class="form-control" placeholder="密码">

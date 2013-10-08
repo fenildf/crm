@@ -23,8 +23,8 @@ class Customer(models.Model):
 class Contact(models.Model):
     name = models.CharField(max_length=30)
     duty = models.CharField(max_length=30)
-    customer = Customer.name
-    username = models.CharField(max_length=30)
+    # customer = Customer.name
+    # username = Customer(username)
     department = models.CharField(max_length=30)
     telephone = models.CharField(max_length=30)
     mobile = models.CharField(max_length=30)
@@ -39,9 +39,9 @@ class Contact(models.Model):
 class Sale_opportunity(models.Model):
     name = models.CharField(max_length=30)
     # 表关联外键
-    customer = Customer.name
-    contact = Contact.name
-    username = models.CharField(max_length=30)
+    # customer = Customer(name)
+    # contact = Contact(name)
+    # username = Customer(username)
     competitors_info = models.CharField(max_length=60)
     phase = models.CharField(max_length=30)
     project_apply_approved  = models.CharField(max_length=30)
