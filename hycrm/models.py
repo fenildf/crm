@@ -66,4 +66,3 @@ class Sale_opportunity(models.Model):
     note = models.CharField(max_length=30)
     def __unicode__(self):
         return self.name
-
