@@ -1,41 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh_cn">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
-
     <title>华仪客户关系管理系统</title>
-
-    <!-- Bootstrap core CSS -->
     {% load staticfiles %}
     <link href="{% static "ico/huayi.png" %}" rel="shortcut icon">
     <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="{% static "css/signin.css" %}" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <div class="container">
-
-{#      <form class="form-signin" herf="{{ login }} " method='post'>#}
-          <form class="form-signin" action="{% url "hycrm.views.main_view" %}" method='post'>
+</head>
+<body>
+<div class="container">
+    <form class="form-signin" action="{% url "hycrm.views.main_view" %}" method='post'>
         <h2 class="form-signin-heading">用户登入</h2>
         <input name='username' type="text" class="form-control" placeholder="用户" autofocus>
         <input name='password' type="password" class="form-control" placeholder="密码">
         <label class="checkbox">
-          <input type="checkbox" value="remember-me"> 记住我
+            <input type="checkbox" value="remember-me"> 记住我
         </label>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
-      </form>
-
-    </div> <!-- /container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  </body>
+    </form>
+</div>
+</body>
 </html>
