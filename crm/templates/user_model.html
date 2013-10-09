@@ -1,10 +1,40 @@
+# coding=utf-8
 {#该模版是根据不同的用户来显示不同的用户视图#}
 {% extends "base.html" %}
 {% block content %}
-    <li><a href={% url "hycrm.views.denglu" %}>主页</a></li>
-{#     <li class="active"><a href={% url "hycrm.views.denglu" %}>主页</a></li>#}
-
     {% for model_fun in model_list %}
-    <li><a href="#">{{ model_fun }}</a></li>
+        {% ifequal model_fun "main_page" %}
+            <li><a href={% url "hycrm.views.main_page" %}>主页</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_customer" %}
+            <li><a href={% url "hycrm.views.main_customer" %}>客户</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_contact" %}
+            <li><a href={% url "hycrm.views.main_contact" %}>联系人</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_sale_opportunity" %}
+            <li><a href={% url "hycrm.views.main_sale_opportunity" %}>业务机会</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_project_apply" %}
+            <li><a href={% url "hycrm.views.main_project_apply" %}>立项申请</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_weekly_plan" %}
+            <li><a href={% url "hycrm.views.main_weekly_plan" %}>周计划</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_travel_request" %}
+            <li><a href={% url "hycrm.views.main_travel_request" %}>出差申请</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_travel_report" %}
+            <li><a href={% url "hycrm.views.main_travel_report" %}>出差汇报</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_budget_apply" %}
+            <li><a href={% url "hycrm.views.main_budget_apply" %}>业务费用申请报销</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_business_apply" %}
+            <li><a href={% url "hycrm.views.main_business_apply" %}>商务支持</a></li>
+        {% endifequal %}
+        {% ifequal model_fun "main_sale_report" %}
+            <li><a href={% url "hycrm.views.main_sale_report" %}>统计报表</a></li>
+        {% endifequal %}
     {% endfor %}
 {% endblock %}
