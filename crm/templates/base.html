@@ -12,6 +12,8 @@
     <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="{% static "css/bootstrap-theme.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/theme.css" %}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -29,7 +31,8 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                {% block content %}{% endblock %}
+{#                根据不同用户显示不同功能项#}
+                {% include 'user_model.html' %}
             </ul>
             <ul class="nav navbar-nav pull-right">
                 <li class="dropdown">
@@ -46,11 +49,17 @@
     </div>
 </div>
 
+{#<div class="container">#}
+{#    {% block model_func %}{% endblock %}#}
+{#</div>#}
+<div class="container theme-showcase">
+    {% block model_func %}{% endblock %}
+</div>
+<!-- /container -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{% static "js/jquery.js" %}"></script>
 <script src="{% static "js/bootstrap.min.js" %}"></script>
-
 </body>
 </html>

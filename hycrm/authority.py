@@ -2,6 +2,7 @@
 __author__ = 'lwy'
 # 根据用户显示主页的菜单
 # 根据用户的组等来控制显示的权限
+from hycrm.models import Customer
 def get_user_display_model(user):
     if user == 'admin':
         user_display_model = ['main_page',
@@ -21,3 +22,8 @@ def get_user_display_model(user):
                               'main_customer',
                               'main_contact']
         return user_display_model
+
+# 根据用户权限等取响应的数据
+def get_user_customer(user):
+    customer_data = Customer.objects.all().filter(name=user)
+    return customer_data
