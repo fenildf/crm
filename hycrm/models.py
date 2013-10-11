@@ -18,6 +18,8 @@ class Customer(models.Model):
     budget = models.CharField(max_length=50)
     #每个模型都要有一个用户(这里的用户指的是销售)
     username = models.CharField(max_length=30)
+    #alter table hycrm_customer add column note varchar(100)
+    note = models.CharField(max_length=100)
     def __unicode__(self):
         return self.name
 # 姓名、职务、性别、对应客户、部门、电话、手机、电子邮件、费用次数、费用累计

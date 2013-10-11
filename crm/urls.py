@@ -4,7 +4,7 @@ from django.contrib import admin
 from hycrm.views import index
 from hycrm.views import main_view
 from hycrm.views import main_page
-from hycrm.views import main_customer
+from hycrm.views import main_customer,new_customer
 from hycrm.views import main_contact
 from hycrm.views import main_sale_opportunity
 from hycrm.views import main_project_apply
@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     (r'^crm/$', main_view),
     (r'^crm/main_page/$', main_page),
     (r'^crm/main_customer/$', main_customer),
+    (r'^crm/main_customer/new_customer$', new_customer),
     (r'^crm/main_contact/$', main_contact),
     (r'^crm/main_sale_opportunity/$', main_sale_opportunity),
     (r'^crm/main_project_apply/$', main_project_apply),

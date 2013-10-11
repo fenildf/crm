@@ -3,7 +3,7 @@
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
-from hycrm.authority import get_user_display_model, get_user_customer
+from hycrm.authority import get_user_display_model, get_user_customer, save_new_customer
 from django.contrib.auth.decorators import login_required
 from django.template.loader import get_template
 from django.template import Context
@@ -43,6 +43,19 @@ def main_customer(request):
          'customer_data': customer_data}
     ))
     return HttpResponse(html)
+
+
+def new_customer(request):
+    # 储存数据
+    save_new_customer([request.POST.get('name'),
+                       request.POST.get('kind'),
+                       request.POST.get('phone'),
+                       request.POST.get('address'),
+                       0,
+                       request.user.username,
+                       request.POST.get('note')])
+
+    return HttpResponseRedirect('/crm/main_customer/')
 
 
 def main_contact(request):
