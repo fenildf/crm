@@ -25,5 +25,7 @@ def get_user_display_model(user):
 
 # 根据用户权限等取响应的数据
 def get_user_customer(user):
-    customer_data = Customer.objects.all().filter(name=user)
+    customer_data = Customer.objects.all()
+        #.filter(name=user)
+    a = 1
     return customer_data

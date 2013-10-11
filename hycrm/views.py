@@ -40,7 +40,6 @@ def main_customer(request):
     html = t.render(Context({'username': request.user.username, 'model_list': model_list}))
     return HttpResponse(html)
 
-
 def main_contact(request):
     return HttpResponse("联系人")
 
