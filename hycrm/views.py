@@ -3,7 +3,7 @@
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
-from authority import get_user_display_model,get_user_customer
+from hycrm.authority import get_user_display_model, get_user_customer
 from django.contrib.auth.decorators import login_required
 from django.template.loader import get_template
 from django.template import Context
@@ -37,8 +37,13 @@ def main_customer(request):
     model_list = get_user_display_model(request.user.username)
     customer_data = get_user_customer(request.user.username)
     t = get_template('main_customer.html')
-    html = t.render(Context({'username': request.user.username, 'model_list': model_list}))
+    html = t.render(Context(
+        {'username': request.user.username,
+         'model_list': model_list,
+         'customer_data': customer_data}
+    ))
     return HttpResponse(html)
+
 
 def main_contact(request):
     return HttpResponse("联系人")
