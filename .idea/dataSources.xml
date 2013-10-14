@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4" />
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3050761917">
+    <data-source source="LOCAL" name="Django default" uuid="77da6ee3-3de9-4677-844f-32269c66d99b">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:e:\crm\db\sqlite3.db</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
 
