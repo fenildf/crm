@@ -54,7 +54,6 @@ def new_customer(request):
                        0,
                        request.user.username,
                        request.POST.get('note')])
-
     return HttpResponseRedirect('/crm/main_customer/')
 
 

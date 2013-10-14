@@ -1,5 +1,3 @@
-{#该模版是根据不同的用户来显示不同的用户视图#}
-
 {% for model_fun in model_list %}
     {% ifequal model_fun "main_page" %}
         <li><a href={% url "hycrm.views.main_page" %}>主页</a></li>
@@ -26,7 +24,7 @@
         <li><a href={% url "hycrm.views.main_travel_report" %}>出差汇报</a></li>
     {% endifequal %}
     {% ifequal model_fun "main_budget_apply" %}
-        <li><a href={% url "hycrm.views.main_budget_apply" %}>业务费用申请报销</a></li>
+        <li><a href={% url "hycrm.views.main_budget_apply" %}>费用申请</a></li>
     {% endifequal %}
     {% ifequal model_fun "main_business_apply" %}
         <li><a href={% url "hycrm.views.main_business_apply" %}>商务支持</a></li>
