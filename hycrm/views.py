@@ -55,7 +55,16 @@ def new_customer(request):
                        request.user.username,
                        request.POST.get('note')])
     return HttpResponseRedirect('/crm/main_customer/')
-
+def edit_customer(request):
+    # 储存数据
+    save_new_customer([request.POST.get('name'),
+                       request.POST.get('kind'),
+                       request.POST.get('phone'),
+                       request.POST.get('address'),
+                       0,
+                       request.user.username,
+                       request.POST.get('note')])
+    return HttpResponseRedirect('/crm/main_customer/')
 
 def main_contact(request):
     return HttpResponse("联系人")
