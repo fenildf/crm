@@ -1,0 +1,14 @@
+.hover_click_customer {
+    background-color: #2f96b4;
+}
+
+.hover_move_customer {
+    background-color: #c4e3f3;
+}
+
+.table_customer {
+    cursor: pointer;
+}
+.modal-body{
+    max-height: 800px;
+}

@@ -3,12 +3,17 @@
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
-from hycrm.authority import get_user_display_model, get_user_customer, save_new_customer
+from hycrm.authority import get_user_display_model
+from hycrm.authority import get_user_customer, create_user_customer, edit_user_customer
+from hycrm.authority import get_user_contact, create_user_contact, edit_user_contact
 from django.contrib.auth.decorators import login_required
 from django.template.loader import get_template
 from django.template import Context
+import json
 
-
+def get_customer_name(request):
+    name = ['北京','天津','上海']
+    return HttpResponse(json.dumps(name,ensure_ascii=False))
 def index(request):
     return render_to_response('login.html')
 
@@ -30,10 +35,6 @@ def main_page(request):
 
 
 def main_customer(request):
-    #1.获取该用户的客户数据
-    #2.建立用于显示的页面
-    #3.数据和显示页面关联起来
-    #4.完成页面的新增操作
     model_list = get_user_display_model(request.user.username)
     customer_data = get_user_customer(request.user.username)
     t = get_template('main_customer.html')
@@ -47,27 +48,70 @@ def main_customer(request):
 
 def new_customer(request):
     # 储存数据
-    save_new_customer([request.POST.get('name'),
-                       request.POST.get('kind'),
-                       request.POST.get('phone'),
-                       request.POST.get('address'),
-                       0,
-                       request.user.username,
-                       request.POST.get('note')])
-    return HttpResponseRedirect('/crm/main_customer/')
-def edit_customer(request):
-    # 储存数据
-    save_new_customer([request.POST.get('name'),
-                       request.POST.get('kind'),
-                       request.POST.get('phone'),
-                       request.POST.get('address'),
-                       0,
-                       request.user.username,
-                       request.POST.get('note')])
+    create_user_customer([request.POST.get('name'),
+                          request.POST.get('kind'),
+                          request.POST.get('phone'),
+                          request.POST.get('address'),
+                          0,
+                          request.user.username,
+                          request.POST.get('note')])
     return HttpResponseRedirect('/crm/main_customer/')
 
+
+def edit_customer(request):
+    # 储存数据
+    edit_user_customer([request.POST.get('id'),
+                        request.POST.get('name'),
+                        request.POST.get('kind'),
+                        request.POST.get('phone'),
+                        request.POST.get('address'),
+                        request.POST.get('note')])
+    return HttpResponseRedirect('/crm/main_customer/')
+
+#------------------------------------------------------------
 def main_contact(request):
-    return HttpResponse("联系人")
+    model_list = get_user_display_model(request.user.username)
+    contact_data = get_user_contact(request.user.username)
+    t = get_template('main_contact.html')
+    html = t.render(Context(
+        {'username': request.user.username,
+         'model_list': model_list,
+         'contact_data': contact_data}
+    ))
+    return HttpResponse(html)
+
+
+def new_contact(request):
+    # 储存数据
+    create_user_contact([request.POST.get('name'),
+                         request.POST.get('duty'),
+                         request.POST.get('gender'),
+                         request.POST.get('customer_name'),
+                         request.user.username,
+                         request.POST.get('department'),
+                         request.POST.get('telephone'),
+                         request.POST.get('mobile'),
+                         request.POST.get('email'),
+                         0,
+                         0,
+                         request.POST.get('note')])
+    return HttpResponseRedirect('/crm/main_contact/')
+
+
+def edit_contact(request):
+    # 储存数据
+    edit_user_contact([request.POST.get('id'),
+                       request.POST.get('name'),
+                       request.POST.get('duty'),
+                       request.POST.get('gender'),
+                       request.POST.get('customer_name'),
+                       request.POST.get('department'),
+                       request.POST.get('telephone'),
+                       request.POST.get('mobile'),
+                       request.POST.get('email'),
+                       request.POST.get('note')])
+    print(request.POST.get('name'))
+    return HttpResponseRedirect('/crm/main_contact/')
 
 
 def main_sale_opportunity(request):

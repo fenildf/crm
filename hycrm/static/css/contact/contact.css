@@ -1,0 +1,14 @@
+.hover_click_contact {
+    background-color: #2f96b4;
+}
+
+.hover_move_contact {
+    background-color: #c4e3f3;
+}
+
+.table_contact {
+    cursor: pointer;
+}
+.modal-body{
+    max-height: 800px;
+}

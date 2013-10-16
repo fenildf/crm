@@ -22,21 +22,26 @@ class Customer(models.Model):
     note = models.CharField(max_length=100)
     def __unicode__(self):
         return self.name
-# 姓名、职务、性别、对应客户、部门、电话、手机、电子邮件、费用次数、费用累计
-#
-#class Contact(models.Model):
-#    name = models.CharField(max_length=30)
-#    duty = models.CharField(max_length=30)
-#    customer_name = models.CharField(max_length=30)
-#    username = models.CharField(max_length=30)
-#    department = models.CharField(max_length=30)
-#    telephone = models.CharField(max_length=30)
-#    mobile = models.CharField(max_length=30)
-#    email = models.CharField(max_length=30)
-#    budget_count = models.CharField(max_length=30)
-#    budget_sum = models.CharField(max_length=30)
-#    def __unicode__(self):
-#        return self.name
+# 姓名、职务、性别、对应客户、所属人
+#部门、电话、手机、电子邮件、费用次数
+# 费用累计
+class Contact(models.Model):
+    name = models.CharField(max_length=30)
+    duty = models.CharField(max_length=30)
+    gender = models.CharField(max_length=30)
+    #对应的客户名称
+    customer_name = models.CharField(max_length=30)
+    #对应的登录用户名称
+    username = models.CharField(max_length=30)
+    department = models.CharField(max_length=30)
+    telephone = models.CharField(max_length=30)
+    mobile = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
+    budget_count = models.CharField(max_length=30)
+    budget_sum = models.CharField(max_length=30)
+    note = models.CharField(max_length=100)
+    def __unicode__(self):
+        return self.name
 ## 基本信息（业务机会名称、对应客户、对应联系人、竞争对手分析、阶段、是否立项审批、推荐产品、客户决策链）；
 ## 项目信息（预先销售额、预计毛利、占年度目标比例、预计招标日期、签约时间、厂家支持率、是否报备、目前费用总和、目前面临的问题、下一步工作计划、资源需求、已处于本阶段几周、何时进入下一阶段、赢率）；
 ## 备注
