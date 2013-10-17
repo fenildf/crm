@@ -39,31 +39,34 @@ $(document).ready(function () {
             });
         }
     });
-            $("#edit_contact_btn").click(function () {
-            if ($('#edit_customer_name option').size() == 1) {
-                $.ajax({
-                    type: "POST",
-                    url: "all_customers",
-                    dataType: 'json',
-                    success: function (jsonObject) {
-                        $.each(jsonObject, function (key, val) {
-                            $("#edit_customer_name").append("<option>" + val + "</option>");
-                        });
-                    }
-                });
-            }
-            i = current_selected + 1;
-            $("#edit_contact_id").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(1)').text());
-            $("#edit_contact_name").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(2)').text());
-            $("#edit_contact_duty").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(3)').text());
-            $("#edit_contact_gender").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(4)').text());
-            $("#edit_customer_name").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(5)').text());
-            $("#edit_contact_department").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(7)').text());
-            $("#edit_contact_telephone").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(8)').text());
-            $("#edit_contact_mobile").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(9)').text());
-            $("#edit_contact_email").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(10)').text());
-            $("#edit_contact_note").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(13)').text());
-        });
+    $("#edit_contact_btn").click(function () {
+        i = current_selected + 1;
+        if ($('#edit_customer_name option').size() == 1) {
+//            ajax有异步执行的问题，和下面的代码不是顺序执行的，要在回调里写
+            $.ajax({
+                type: "POST",
+                url: "all_customers",
+                dataType: 'json',
+                success: function (jsonObject) {
+                    $.each(jsonObject, function (key, val) {
+                        $("#edit_customer_name").append("<option>" + val + "</option>");
+                        $("#edit_customer_name").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(5)').text());
+                    });
+                }
+            });
+        }
+
+        $("#edit_contact_id").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(1)').text());
+        $("#edit_contact_name").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(2)').text());
+        $("#edit_contact_duty").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(3)').text());
+        $("#edit_contact_gender").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(4)').text());
+        $("#edit_customer_name").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(5)').text());
+        $("#edit_contact_department").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(7)').text());
+        $("#edit_contact_telephone").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(8)').text());
+        $("#edit_contact_mobile").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(9)').text());
+        $("#edit_contact_email").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(10)').text());
+        $("#edit_contact_note").val($('#table_contact tr:nth-child(' + i + ') td:nth-child(13)').text());
+    });
     //点击"对应客户"选择框，从数据库得到对应的客户数据用ajax？
 
 });

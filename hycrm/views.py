@@ -5,15 +5,22 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
 from hycrm.authority import get_user_display_model
 from hycrm.authority import get_user_customer, create_user_customer, edit_user_customer
-from hycrm.authority import get_user_contact, create_user_contact, edit_user_contact
+from hycrm.authority import get_user_contact, create_user_contact, edit_user_contact, get_user_customer_name
+from hycrm.authority import get_user_sale_opportunity
 from django.contrib.auth.decorators import login_required
 from django.template.loader import get_template
 from django.template import Context
 import json
 
+#ajax方式获取联系人对应的所属客户
 def get_customer_name(request):
-    name = ['北京','天津','上海']
-    return HttpResponse(json.dumps(name,ensure_ascii=False))
+    customer_name = get_user_customer_name(request)
+    name = []
+    for v in customer_name:
+        name.append(v['name'])
+    return HttpResponse(json.dumps(name, ensure_ascii=False))
+
+
 def index(request):
     return render_to_response('login.html')
 
@@ -115,7 +122,37 @@ def edit_contact(request):
 
 
 def main_sale_opportunity(request):
-    return HttpResponse("业务机会")
+    model_list = get_user_display_model(request.user.username)
+    sale_opportunity_data = get_user_sale_opportunity(request.user.username)
+    t = get_template('main_sale_opportunity.html')
+    html = t.render(Context(
+        {'username': request.user.username,
+         'model_list': model_list,
+         'sale_opportunity_data': sale_opportunity_data}
+    ))
+    return HttpResponse(html)
+
+
+def new_sale_opportunity(request):
+    model_list = get_user_display_model(request.user.username)
+    t = get_template('main_sale_opportunity_detail.html')
+    html = t.render(Context(
+        {'username': request.user.username,
+         'title': "新建业务机会",
+         'model_list': model_list}
+    ))
+    return HttpResponse(html)
+
+
+def edit_sale_opportunity(request):
+    model_list = get_user_display_model(request.user.username)
+    t = get_template('main_sale_opportunity_detail.html')
+    html = t.render(Context(
+        {'username': request.user.username,
+         'title': "编辑业务机会",
+         'model_list': model_list}
+    ))
+    return HttpResponse(html)
 
 
 def main_project_apply(request):

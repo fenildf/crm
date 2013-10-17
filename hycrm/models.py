@@ -45,30 +45,31 @@ class Contact(models.Model):
 ## 基本信息（业务机会名称、对应客户、对应联系人、竞争对手分析、阶段、是否立项审批、推荐产品、客户决策链）；
 ## 项目信息（预先销售额、预计毛利、占年度目标比例、预计招标日期、签约时间、厂家支持率、是否报备、目前费用总和、目前面临的问题、下一步工作计划、资源需求、已处于本阶段几周、何时进入下一阶段、赢率）；
 ## 备注
-#class Sale_opportunity(models.Model):
-#    name = models.CharField(max_length=30)
-#    customer_name = models.CharField(max_length=30)
-#    contact_name = models.CharField(max_length=30)
-#    username = models.CharField(max_length=30)
-#    competitors_info = models.CharField(max_length=60)
-#    phase = models.CharField(max_length=30)
-#    project_apply_approved  = models.CharField(max_length=30)
-#    recommend_products = models.CharField(max_length=30)
-#    customer_decision = models.CharField(max_length=30)
-#    projected_sales = models.CharField(max_length=30)
-#    projected_gross_profit = models.CharField(max_length=30)
-#    annual_goal_percentage = models.CharField(max_length=30)
-#    expected_tender_date = models.CharField(max_length=30)
-#    sign_Time = models.CharField(max_length=30)
-#    manufacturers_support_rate = models.CharField(max_length=30)
-#    is_filing = models.CharField(max_length=30)
-#    current_budget_sum = models.CharField(max_length=30)
-#    current_problem = models.CharField(max_length=30)
-#    following_plan = models.CharField(max_length=30)
-#    resource_Requirements = models.CharField(max_length=30)
-#    current_week = models.CharField(max_length=30)
-#    next_phase_time = models.CharField(max_length=30)
-#    success_chance = models.CharField(max_length=30)
-#    note = models.CharField(max_length=30)
-#    def __unicode__(self):
-#        return self.name
+class Sale_opportunity(models.Model):
+    name = models.CharField(max_length=30)
+    customer_name = models.CharField(max_length=30)
+    contact_name = models.CharField(max_length=30)
+    username = models.CharField(max_length=30)
+    competitors_info = models.CharField(max_length=60)
+    phase = models.CharField(max_length=30)
+    project_apply_approved  = models.CharField(max_length=30)
+    recommend_products = models.CharField(max_length=30)
+    customer_decision = models.CharField(max_length=30)
+
+    projected_sales = models.CharField(max_length=30)
+    projected_gross_profit = models.CharField(max_length=30)
+    annual_goal_percentage = models.CharField(max_length=30)
+    expected_tender_date = models.CharField(max_length=30)
+    sign_Time = models.CharField(max_length=30)
+    manufacturers_support_rate = models.CharField(max_length=30)
+    is_filing = models.CharField(max_length=30)
+    current_budget_sum = models.CharField(max_length=30)
+    current_problem = models.CharField(max_length=30)
+    following_plan = models.CharField(max_length=30)
+    resource_Requirements = models.CharField(max_length=30)
+    current_week = models.CharField(max_length=30)
+    next_phase_time = models.CharField(max_length=30)
+    success_chance = models.CharField(max_length=30)
+    note = models.CharField(max_length=30)
+    def __unicode__(self):
+        return self.name

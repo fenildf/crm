@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/crm/templates/login.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crm/templates/main_contact.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crm/templates/main_customer.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crm/templates/main_sale_opportunity.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crm/templates/main_sale_opportunity_detail.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crm/templates/user_model.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hycrm/models.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hycrm/static/js/contact/contact.js" charset="UTF-8" />

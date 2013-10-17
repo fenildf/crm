@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e664bbcd-61a4-4a0e-aba9-5be750299803" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hycrm/static/css/contact/contact.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hycrm/static/js/contact/contact.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hycrm/static/css/customer/customer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hycrm/static/js/customer/customer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/templates/main_contact.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/templates/main_sale_opportunity.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/templates/main_sale_opportunity_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hycrm/static/css/sale_opportunity/sale_opportunity.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hycrm/static/js/sale_opportunity/sale_opportunity.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crm/templates/test.html" />
+      <change type="DELETED" beforePath="E:\crm\db\JqueryTable.rar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sqlite3.db" afterPath="$PROJECT_DIR$/db/sqlite3.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hycrm/authority.py" afterPath="$PROJECT_DIR$/hycrm/authority.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/templates/base.html" afterPath="$PROJECT_DIR$/crm/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hycrm/static/js/contact/contact.js" afterPath="$PROJECT_DIR$/hycrm/static/js/contact/contact.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/templates/main_customer.html" afterPath="$PROJECT_DIR$/crm/templates/main_customer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/templates/main_contact.html" afterPath="$PROJECT_DIR$/crm/templates/main_contact.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hycrm/models.py" afterPath="$PROJECT_DIR$/hycrm/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/urls.py" afterPath="$PROJECT_DIR$/crm/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hycrm/views.py" afterPath="$PROJECT_DIR$/hycrm/views.py" />
@@ -41,57 +43,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_contact.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crm/templates/main_contact.html">
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="11" selection-start="4973" selection-end="8214" vertical-scroll-proportion="0.94323146" vertical-offset="5584" max-vertical-offset="6240">
-              <folding>
-                <element signature="e#95#121#0" expanded="true" />
-                <element signature="e#362#382#0" expanded="true" />
-                <element signature="e#436#462#0" expanded="true" />
-                <element signature="e#535#555#0" expanded="true" />
-                <element signature="e#5556#5576#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hycrm/static/js/contact/contact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="11" selection-start="1467" selection-end="3175" vertical-scroll-proportion="0.0" vertical-offset="1368" max-vertical-offset="2016">
-              <folding>
-                <element signature="e#465#963#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hycrm/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="6" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="2560">
+            <state line="52" column="40" selection-start="1587" selection-end="1591" vertical-scroll-proportion="-6.138889" vertical-offset="1443" max-vertical-offset="2304">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crm/urls.py">
+      <file leaf-file-name="main_sale_opportunity_detail.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crm/templates/main_sale_opportunity_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="57" selection-start="1548" selection-end="1561" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="1600">
-              <folding />
+            <state line="12" column="23" selection-start="424" selection-end="424" vertical-scroll-proportion="0.6178344" vertical-offset="93" max-vertical-offset="8160">
+              <folding>
+                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+                <element signature="tag#a#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authority.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hycrm/authority.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hycrm/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="34" selection-start="2489" selection-end="2493" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="1664">
+            <state line="151" column="21" selection-start="5467" selection-end="5467" vertical-scroll-proportion="0.0" vertical-offset="4341" max-vertical-offset="6016">
               <folding>
-                <element signature="e#149#1226#0" expanded="false" />
-                <element signature="e#2070#2429#0" expanded="false" />
+                <element signature="e#41#108#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,22 +95,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/hycrm/static/css/theme.css" />
-        <option value="$PROJECT_DIR$/crm/templates/login.html" />
-        <option value="$PROJECT_DIR$/crm/templates/user_model.html" />
-        <option value="$PROJECT_DIR$/crm/templates/test02.html" />
-        <option value="$PROJECT_DIR$/crm/templates/test01.html" />
-        <option value="$PROJECT_DIR$/hycrm/models.py" />
-        <option value="$PROJECT_DIR$/hycrm/static/js/customer/customer.js" />
-        <option value="$PROJECT_DIR$/crm/templates/base.html" />
         <option value="$PROJECT_DIR$/crm/templates/main_customer.html" />
         <option value="$PROJECT_DIR$/hycrm/static/css/contact/contact.css" />
         <option value="$PROJECT_DIR$/hycrm/static/css/customer/customer.css" />
+        <option value="$PROJECT_DIR$/hycrm/models.py" />
         <option value="$PROJECT_DIR$/hycrm/authority.py" />
-        <option value="$PROJECT_DIR$/crm/urls.py" />
-        <option value="$PROJECT_DIR$/hycrm/views.py" />
+        <option value="$PROJECT_DIR$/hycrm/static/css/sale_opportunity/sale_opportunity.css" />
         <option value="$PROJECT_DIR$/hycrm/static/js/contact/contact.js" />
+        <option value="$PROJECT_DIR$/crm/urls.py" />
+        <option value="$PROJECT_DIR$/crm/templates/test.html" />
+        <option value="$PROJECT_DIR$/crm/templates/base.html" />
+        <option value="$PROJECT_DIR$/crm/templates/main_sale_opportunity_new.html" />
+        <option value="$PROJECT_DIR$/hycrm/static/js/sale_opportunity/sale_opportunity.js" />
+        <option value="$PROJECT_DIR$/crm/templates/main_sale_opportunity.html" />
+        <option value="$PROJECT_DIR$/hycrm/views.py" />
         <option value="$PROJECT_DIR$/crm/templates/main_contact.html" />
+        <option value="$PROJECT_DIR$/crm/templates/main_sale_opportunity_detail.html" />
       </list>
     </option>
   </component>
@@ -167,7 +146,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,99 +178,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hycrm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hycrm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hycrm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hycrm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contact" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hycrm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,20 +216,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="settings.github" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -352,6 +239,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\crm\hycrm\static\css" />
+      <recent name="E:\crm\crm\templates" />
       <recent name="E:\crm\hycrm\static\js\contact" />
       <recent name="E:\crm\hycrm\static\css\contact" />
     </key>
@@ -409,6 +298,22 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="crm" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="browserUrl" value="" />
+      <option name="additionalOptions" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -431,22 +336,6 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="crm" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="browserUrl" value="" />
-      <option name="additionalOptions" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -464,7 +353,40 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="crm" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
+      <module name="" />
+      <option name="PORT" value="0" />
+      <option name="HOST" value="null" />
+      <PathMappingSettings>
+        <option name="pathMappings">
+          <list />
+        </option>
+      </PathMappingSettings>
+      <option name="REDIRECT_OUTPUT" value="true" />
+      <option name="SUSPEND_AFTER_CONNECT" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -490,40 +412,7 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
-      <module name="" />
-      <option name="PORT" value="0" />
-      <option name="HOST" value="null" />
-      <PathMappingSettings>
-        <option name="pathMappings">
-          <list />
-        </option>
-      </PathMappingSettings>
-      <option name="REDIRECT_OUTPUT" value="true" />
-      <option name="SUSPEND_AFTER_CONNECT" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="crm" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -736,7 +625,11 @@
       <created>1381833580898</created>
       <updated>1381833580898</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="基本完成了“联系人”修改的功能&#10;“客户”和“联系人的”在修改时下拉框要和原来的一致。&#10;并且“联系人”里的“客户”要从数据库中读取">
+      <created>1381920081397</created>
+      <updated>1381920081397</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -768,12 +661,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15394567" sideWeight="0.49253732" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21474774" sideWeight="0.7584803" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21021992" sideWeight="0.73134327" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21668823" sideWeight="0.8018996" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12871927" sideWeight="0.67164177" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.568521" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923675" sideWeight="0.712963" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13939394" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3962008" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20895523" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32700136" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -800,9 +693,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37645537" sideWeight="0.7286296" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15394567" sideWeight="0.5983718" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40162823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -836,7 +729,8 @@
     <MESSAGE value="重新整理前端界面：由于bootstrap的3.0和2.3.2改动很多，而且官方的文档是2.32的，所以重新使用2.3.2的版本替换了3的。" />
     <MESSAGE value="重新布局增加页面，处理修改中..." />
     <MESSAGE value="利用jquery 实现了选择行，同步修改edit按钮，并链接了修改窗口。" />
-    <option name="LAST_COMMIT_MESSAGE" value="利用jquery 实现了选择行，同步修改edit按钮，并链接了修改窗口。" />
+    <MESSAGE value="基本完成了“联系人”修改的功能&#10;“客户”和“联系人的”在修改时下拉框要和原来的一致。&#10;并且“联系人”里的“客户”要从数据库中读取" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本完成了“联系人”修改的功能&#10;“客户”和“联系人的”在修改时下拉框要和原来的一致。&#10;并且“联系人”里的“客户”要从数据库中读取" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -844,127 +738,133 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crm/templates/user_model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="1280" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hycrm/static/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="64261" selection-end="64261" vertical-scroll-proportion="0.1849711" vertical-offset="0" max-vertical-offset="692">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1972" selection-end="1972" vertical-scroll-proportion="-50.583332" vertical-offset="99" max-vertical-offset="2304">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crm/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1216" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hycrm/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hycrm/static/css/customer/customer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="193" selection-end="193" vertical-scroll-proportion="0.5900709" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="34" selection-start="921" selection-end="921" vertical-scroll-proportion="0.27952167" vertical-offset="837" max-vertical-offset="2880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hycrm/static/css/contact/contact.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="608">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1216">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hycrm/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="6" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="2560">
-          <folding />
+        <state line="47" column="22" selection-start="1619" selection-end="1635" vertical-scroll-proportion="0.1849711" vertical-offset="864" max-vertical-offset="2080">
+          <folding>
+            <element signature="e#814#1450#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hycrm/authority.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="34" selection-start="2489" selection-end="2493" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="1664">
+        <state line="85" column="41" selection-start="3202" selection-end="3202" vertical-scroll-proportion="0.7276596" vertical-offset="2207" max-vertical-offset="2912">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hycrm/static/css/sale_opportunity/sale_opportunity.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="179" selection-end="179" vertical-scroll-proportion="0.4539007" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/templates/main_customer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="52" selection-start="5410" selection-end="5410" vertical-scroll-proportion="-17.472221" vertical-offset="3371" max-vertical-offset="5088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hycrm/static/js/contact/contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="47" selection-start="1654" selection-end="1654" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1984">
           <folding>
-            <element signature="e#149#1226#0" expanded="false" />
-            <element signature="e#2070#2429#0" expanded="false" />
+            <element signature="e#259#322#0" expanded="false" />
+            <element signature="e#344#410#0" expanded="false" />
+            <element signature="e#465#963#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crm/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="57" selection-start="1548" selection-end="1561" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="1600">
+        <state line="30" column="0" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1696">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hycrm/static/js/customer/customer.js">
+    <entry file="file://$PROJECT_DIR$/crm/templates/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="74" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="447" max-vertical-offset="1248">
+        <state line="11" column="8" selection-start="361" selection-end="361" vertical-scroll-proportion="-4.4444447" vertical-offset="192" max-vertical-offset="800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/templates/user_model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="37" selection-start="198" selection-end="198" vertical-scroll-proportion="-3.5555556" vertical-offset="0" max-vertical-offset="1280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="64" selection-start="1516" selection-end="1532" vertical-scroll-proportion="-11.583333" vertical-offset="959" max-vertical-offset="3008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hycrm/static/js/sale_opportunity/sale_opportunity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="68" selection-start="771" selection-end="771" vertical-scroll-proportion="0.45531914" vertical-offset="159" max-vertical-offset="960">
           <folding>
-            <element signature="e#0#43#0" expanded="false" />
+            <element signature="e#321#393#0" expanded="false" />
+            <element signature="e#415#490#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm/templates/main_customer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="52" selection-start="5410" selection-end="5410" vertical-scroll-proportion="-52.13889" vertical-offset="2123" max-vertical-offset="5088">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hycrm/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="47" selection-start="3169" selection-end="3169" vertical-scroll-proportion="0.3699422" vertical-offset="2624" max-vertical-offset="4832">
+        <state line="151" column="21" selection-start="5467" selection-end="5467" vertical-scroll-proportion="0.0" vertical-offset="4341" max-vertical-offset="6016">
           <folding>
             <element signature="e#41#108#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hycrm/static/js/contact/contact.js">
+    <entry file="file://$PROJECT_DIR$/crm/templates/main_contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="11" selection-start="1467" selection-end="3175" vertical-scroll-proportion="0.0" vertical-offset="1368" max-vertical-offset="2016">
+        <state line="6" column="48" selection-start="275" selection-end="275" vertical-scroll-proportion="0.28699553" vertical-offset="0" max-vertical-offset="6272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/templates/main_sale_opportunity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="25" selection-start="116" selection-end="121" vertical-scroll-proportion="0.14634146" vertical-offset="64" max-vertical-offset="1376">
           <folding>
-            <element signature="e#465#963#0" expanded="false" />
+            <element signature="e#123#149#0" expanded="true" />
+            <element signature="e#165#188#0" expanded="true" />
+            <element signature="e#403#426#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm/templates/main_contact.html">
+    <entry file="file://$PROJECT_DIR$/crm/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="11" selection-start="4973" selection-end="8214" vertical-scroll-proportion="0.94323146" vertical-offset="5584" max-vertical-offset="6240">
+        <state line="52" column="40" selection-start="1587" selection-end="1591" vertical-scroll-proportion="-6.138889" vertical-offset="1443" max-vertical-offset="2304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm/templates/main_sale_opportunity_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="424" selection-end="424" vertical-scroll-proportion="0.6178344" vertical-offset="93" max-vertical-offset="8160">
           <folding>
-            <element signature="e#95#121#0" expanded="true" />
-            <element signature="e#362#382#0" expanded="true" />
-            <element signature="e#436#462#0" expanded="true" />
-            <element signature="e#535#555#0" expanded="true" />
-            <element signature="e#5556#5576#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="tag#a#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
           </folding>
         </state>
       </provider>

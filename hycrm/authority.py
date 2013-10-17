@@ -2,7 +2,7 @@
 __author__ = 'lwy'
 # 根据用户显示主页的菜单
 # 根据用户的组等来控制显示的权限
-from hycrm.models import Customer, Contact
+from hycrm.models import Customer, Contact,Sale_opportunity
 
 
 def get_user_display_model(user):
@@ -80,3 +80,7 @@ def edit_user_contact(item):
                                               mobile=item[7],
                                               email=item[8],
                                               note=item[9])
+def get_user_customer_name(item):
+    return Customer.objects.all().values('name')
+def get_user_sale_opportunity(item):
+    return Sale_opportunity.objects.all()

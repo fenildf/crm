@@ -6,7 +6,7 @@ from hycrm.views import main_view
 from hycrm.views import main_page
 from hycrm.views import main_customer, new_customer, edit_customer
 from hycrm.views import main_contact, new_contact, edit_contact,get_customer_name
-from hycrm.views import main_sale_opportunity
+from hycrm.views import main_sale_opportunity,new_sale_opportunity,edit_sale_opportunity
 from hycrm.views import main_project_apply
 from hycrm.views import main_weekly_plan
 from hycrm.views import main_travel_request
@@ -35,6 +35,9 @@ urlpatterns = patterns('',
                        (r'^crm/main_contact/all_customers', get_customer_name),
 
                        (r'^crm/main_sale_opportunity/$', main_sale_opportunity),
+                       (r'^crm/main_sale_opportunity/new_sale_opportunity', new_sale_opportunity),
+                       (r'^crm/main_sale_opportunity/edit_sale_opportunity', edit_sale_opportunity),
+
                        (r'^crm/main_project_apply/$', main_project_apply),
                        (r'^crm/main_weekly_plan/$', main_weekly_plan),
                        (r'^crm/main_travel_request/$', main_travel_request),
