@@ -68,7 +68,7 @@
     </table>
 
     {#新增联系人的表单#}
-    <form class="form-signin " action="{% url "hycrm.views.new_contact" %}" method="post">
+    <form class="form-signin " action="{% url "hycrm.contact_view.new_contact" %}" method="post">
         <div id="new_contact" class="modal  hide fade" tabindex="-1" data-width="760">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -124,7 +124,7 @@
     </form>
     {##}
     {#修改联系人的表单#}
-    <form class="form-signin " action="{% url "hycrm.views.edit_contact" %}" method="post">
+    <form class="form-signin " action="{% url "hycrm.contact_view.edit_contact" %}" method="post">
         <div id="edit_contact" class="modal  hide fade" tabindex="-1" data-width="760">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>

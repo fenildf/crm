@@ -2,9 +2,9 @@
 __author__ = 'lwy'
 # 根据用户显示主页的菜单
 # 根据用户的组等来控制显示的权限
+from django.http.response import HttpResponse
 from hycrm.models import Customer, Contact,Sale_opportunity
-
-
+import json
 def get_user_display_model(user):
     if user == 'admin':
         user_display_model = ['main_page',
@@ -30,6 +30,11 @@ def get_user_display_model(user):
                               'main_project_apply',
                               'main_weekly_plan']
     return user_display_model
+def get_user_customer_name(item):
+    return Customer.objects.all().values_list('name', flat=True)
+#@todo:条件需要重新编写
+def get_user_contact_name(item):
+    return Contact.objects.all().values_list('customer_name', flat=True)
 
 # 客户
 def get_user_customer(user):
@@ -37,7 +42,16 @@ def get_user_customer(user):
     return Customer.objects.all()
     #else:
     #    return Customer.objects.all().filter(username=user)
+#ajax获取客户名
+def get_customer_name(request):
+    customer_name = get_user_customer_name(request)
+    print(list(customer_name))
+    return HttpResponse(json.dumps(list(customer_name), ensure_ascii=False))
 
+#获取联系人名
+def get_contact_name(request):
+    customer_name = get_user_contact_name(request)
+    return HttpResponse(json.dumps(list(customer_name), ensure_ascii=False))
 def create_user_customer(item):
     Customer(name=item[0],
              kind=item[1],
@@ -80,7 +94,7 @@ def edit_user_contact(item):
                                               mobile=item[7],
                                               email=item[8],
                                               note=item[9])
-def get_user_customer_name(item):
-    return Customer.objects.all().values('name')
+
 def get_user_sale_opportunity(item):
     return Sale_opportunity.objects.all()
+

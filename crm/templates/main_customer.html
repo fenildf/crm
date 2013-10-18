@@ -52,7 +52,7 @@
     </table>
 
     {#新增客户的表单#}
-    <form class="form-signin new-contact" action="{% url "hycrm.views.new_customer" %}" method="post">
+    <form class="form-signin new-contact" action="{% url "hycrm.customer_view.new_customer" %}" method="post">
         <div id="new_customer" class="modal  hide fade" tabindex="-1" data-width="760">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -100,7 +100,7 @@
         </div>
     </form>
     {#修改客户的表单#}
-    <form class="form-signin " action="{% url "hycrm.views.edit_customer" %}" method="post">
+    <form class="form-signin " action="{% url "hycrm.customer_view.edit_customer" %}" method="post">
         <div id="edit_customer" class="modal  hide fade" tabindex="-1" data-width="760">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>

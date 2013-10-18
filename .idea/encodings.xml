@@ -8,7 +8,9 @@
     <file url="file://$PROJECT_DIR$/crm/templates/main_sale_opportunity_detail.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crm/templates/user_model.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hycrm/models.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hycrm/static/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hycrm/static/js/contact/contact.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hycrm/static/js/sale_opportunity/sale_opportunity.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hycrm/views.py" charset="UTF-8" />
   </component>
 </project>

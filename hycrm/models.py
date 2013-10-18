@@ -45,6 +45,7 @@ class Contact(models.Model):
 ## 基本信息（业务机会名称、对应客户、对应联系人、竞争对手分析、阶段、是否立项审批、推荐产品、客户决策链）；
 ## 项目信息（预先销售额、预计毛利、占年度目标比例、预计招标日期、签约时间、厂家支持率、是否报备、目前费用总和、目前面临的问题、下一步工作计划、资源需求、已处于本阶段几周、何时进入下一阶段、赢率）；
 ## 备注
+#@todo: 项目编号是自动生成的。
 class Sale_opportunity(models.Model):
     name = models.CharField(max_length=30)
     customer_name = models.CharField(max_length=30)

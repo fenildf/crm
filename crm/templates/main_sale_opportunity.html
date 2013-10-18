@@ -4,10 +4,10 @@
 {% block model_func %}
 
     <div class="btn-group" style="margin: 9px 0 5px;">
-        <form style=" display:inline" class = "input-prepend" action="{% url "hycrm.views.new_sale_opportunity" %}" method='post'>
+        <form style=" display:inline" class = "input-prepend" action="{% url "hycrm.sale_opportunity_view.new_sale_opportunity" %}" method='post'>
             <input id="new_sale_opportunity_btn" class="btn" type="submit" value="新增业务机会">
         </form>
-        <form style=" display:inline"  class = "input-append" action="{% url "hycrm.views.edit_sale_opportunity" %}" method='post'>
+        <form style=" display:inline"  class = "input-append" action="{% url "hycrm.sale_opportunity_view.edit_sale_opportunity" %}" method='post'>
             <input id="edit_sale_opportunity_btn" class="btn" type="submit" value="业务机会明细">
         </form>
     </div>

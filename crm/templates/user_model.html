@@ -3,13 +3,13 @@
         <li><a href={% url "hycrm.views.main_page" %}>主页</a></li>
     {% endifequal %}
     {% ifequal model_fun "main_customer" %}
-        <li><a href={% url "hycrm.views.main_customer" %}>客户</a></li>
+        <li><a href={% url "hycrm.customer_view.main_customer" %}>客户</a></li>
     {% endifequal %}
     {% ifequal model_fun "main_contact" %}
-        <li><a href={% url "hycrm.views.main_contact" %}>联系人</a></li>
+        <li><a href={% url "hycrm.contact_view.main_contact" %}>联系人</a></li>
     {% endifequal %}
     {% ifequal model_fun "main_sale_opportunity" %}
-        <li><a href={% url "hycrm.views.main_sale_opportunity" %}>业务机会</a></li>
+        <li><a href={% url "hycrm.sale_opportunity_view.main_sale_opportunity" %}>业务机会</a></li>
     {% endifequal %}
     {% ifequal model_fun "main_project_apply" %}
         <li><a href={% url "hycrm.views.main_project_apply" %}>立项申请</a></li>

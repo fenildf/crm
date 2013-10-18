@@ -34,15 +34,15 @@ $(document).ready(function () {
         showButtonPanel: true
 //        minDate: 0  //从当前日期起可选
     });
-    $("#select_customer_name").click(function () {
-        if ($('#select_contact_name option').size() == 1) {
+    $("#new_sale_opportunity_btn").click(function () {
+        if ($('#new_customer_name option').size() == 1) {
             $.ajax({
                 type: "POST",
-                url: "all_contacts",
+                url: "all_customers",
                 dataType: 'json',
                 success: function (jsonObject) {
                     $.each(jsonObject, function (key, val) {
-                        $("#select_contact_name").append("<option>" + val + "</option>");
+                        $("#new_customer_name").append("<option>" + val + "</option>");
                     });
                 }
             });
