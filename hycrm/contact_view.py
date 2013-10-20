@@ -4,7 +4,10 @@ from django.template.loader import get_template
 from django.template import Context
 from hycrm.authority import get_user_display_model
 from hycrm.authority import get_user_contact, create_user_contact, edit_user_contact,get_user_customer_name
+from django.contrib.auth.decorators import login_required
+import json
 
+@login_required(login_url='/')
 def main_contact(request):
     model_list = get_user_display_model(request.user.username)
     contact_data = get_user_contact(request.user.username)
@@ -46,6 +49,8 @@ def edit_contact(request):
                        request.POST.get('mobile'),
                        request.POST.get('email'),
                        request.POST.get('note')])
-    print(request.POST.get('name'))
     return HttpResponseRedirect('/crm/main_contact/')
 
+def get_contact_customer_name(request):
+    customer_name =  get_user_customer_name(request)
+    return HttpResponse(json.dumps(list(customer_name), ensure_ascii=False))

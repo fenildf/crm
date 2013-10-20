@@ -1,14 +1,11 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-#from django.contrib.auth.views import login, logout
-from hycrm.views import index
+from hycrm.views import index,logout_view
 from hycrm.views import main_view
 from hycrm.views import main_page
 from hycrm.customer_view import  main_customer, new_customer, edit_customer
-from hycrm.contact_view import main_contact, new_contact, edit_contact
-from hycrm.sale_opportunity_view import main_sale_opportunity,new_sale_opportunity,edit_sale_opportunity
-from hycrm.authority import get_customer_name
-from hycrm.authority import get_contact_name
+from hycrm.contact_view import main_contact, new_contact, edit_contact,get_contact_customer_name
+from hycrm.sale_opportunity_view import main_sale_opportunity,new_sale_opportunity,edit_sale_opportunity,get_sale_opportunity_contact_name
 from hycrm.views import main_project_apply
 from hycrm.views import main_weekly_plan
 from hycrm.views import main_travel_request
@@ -25,22 +22,26 @@ urlpatterns = patterns('',
 
                        ('^$', index),
                        (r'^crm/$', main_view),
+                       (r'^crm/logout/$', logout_view),
                        (r'^crm/main_page/$', main_page),
+
 
                        (r'^crm/main_customer/$', main_customer),
                        (r'^crm/main_customer/new_customer$', new_customer),
                        (r'^crm/main_customer/edit_customer$', edit_customer),
 
                        (r'^crm/main_contact/$', main_contact),
-                       (r'^crm/main_contact/new_contact', new_contact),
-                       (r'^crm/main_contact/edit_contact', edit_contact),
-                       (r'^crm/main_contact/all_customers', get_customer_name),
+                       (r'^crm/main_contact/new_contact/$', new_contact),
+                       (r'^crm/main_contact/edit_contact/$', edit_contact),
+                       (r'^crm/main_contact/all_customers', get_contact_customer_name),
 
 
                        (r'^crm/main_sale_opportunity/$', main_sale_opportunity),
-                       (r'^crm/main_sale_opportunity/new_sale_opportunity', new_sale_opportunity),
-                       (r'^crm/main_sale_opportunity/edit_sale_opportunity', edit_sale_opportunity),
-                       (r'^crm/main_sale_opportunity/all_contacts', get_contact_name),
+                       (r'^crm/main_sale_opportunity/new_sale_opportunity/$', new_sale_opportunity),
+                       (r'^crm/main_sale_opportunity/new_sale_opportunity/all_contacts', get_sale_opportunity_contact_name),
+
+                       (r'^crm/main_sale_opportunity/edit_sale_opportunity/$', edit_sale_opportunity),
+                       (r'^crm/main_sale_opportunity/edit_sale_opportunity/all_contacts', get_sale_opportunity_contact_name),
 
                        (r'^crm/main_project_apply/$', main_project_apply),
                        (r'^crm/main_weekly_plan/$', main_weekly_plan),

@@ -2,6 +2,7 @@
 {#显示该登录用户的联系人列表#}
 {% block sale_opportunity %}
     <form class="form-horizontal">
+    <input id="edit_contact_id" type=text style="display:none" name=id>
     <div class="btn-group" style="margin: 9px 0 5px;">
         <button id="sale_opportunity_btn" class="btn " data-toggle="modal">保存</button>
         <button id="cancel_opportunity_btn" class="btn" data-toggle="modal">取消</button>
@@ -22,7 +23,7 @@
                                 <label class="control-label">业务机会名称</label>
 
                                 <div class="controls">
-                                    <input type="text" placeholder="业务机会名称">
+                                    <input type="text" placeholder="业务机会名称" name='name'>
                                 </div>
                             </div>
 
@@ -128,7 +129,6 @@
             </div>
         </div>
     </div>
-
 
     {#    -----------------------------------------------------------------------------------------------------------#}
     <div class="accordion-group">
@@ -273,224 +273,6 @@
             </div>
         </div>
     </div>
-    {#    <div id="project_info" class="accordion-body collapse">#}
-    {#    <div class="accordion-inner">#}
-    {#    <div id="project_info" class="collapse in">#}
-    {#    <table class="cloudtab bianjibg" width="100%" border="0" cellpadding="0" cellspacing="0">#}
-    {#        <tbody>#}
-    {#        <tr>#}
-    {#            <td class="labright">#}
-    {#                预计销售额（以万为单位）#}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input type="text" size="20" maxlength="5" name="ffe201100003456bxpQG" id="ffe201100003456bxpQG"#}
-    {#                           value="">#}
-    {#                </div>#}
-    {#            </td>#}
-    {#            <td class="labright">#}
-    {#                预计招标日期#}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input id="ffe201200849852jRum4" class="datepicker hasDatepicker" size="20" type="text"#}
-    {#                           name="ffe201200849852jRum4" value=""></div>#}
-    {#            </td>#}
-    {#        </tr>#}
-    {#        <tr>#}
-    {#            <td class="labright">#}
-    {#                预计毛利（以万为单位）#}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input type="text" size="20" maxlength="5" name="ffe201200499378gnl09" id="ffe201200499378gnl09"#}
-    {#                           value=""></div>#}
-    {##}
-    {#            </td>#}
-    {#            <td class="labright">#}
-    {#                签约时间#}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input id="ffe201100003459P6VMA" class="datepicker hasDatepicker" size="20" type="text"#}
-    {#                           name="ffe201100003459P6VMA" value=""></div>#}
-    {#            </td>#}
-    {##}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {##}
-    {#            <td class="labright">#}
-    {#                占年度目标比例#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input type="text" size="20" maxlength="3" name="ffe201310856120PO9sj" id="ffe201310856120PO9sj"#}
-    {#                           value=""></div>#}
-    {##}
-    {#            </td>#}
-    {##}
-    {##}
-    {#            <td class="labright">#}
-    {#                厂家支持率#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input type="text" size="20" maxlength="50" name="ffe2012008497699k1vI" id="ffe2012008497699k1vI"#}
-    {#                           value=""></div>#}
-    {##}
-    {#            </td>#}
-    {##}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {##}
-    {#            <td class="labright">#}
-    {#                目前费用总和#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                &nbsp;#}
-    {#                <input type="hidden" name="entity.strField20" id="ffe201200849919P7Vw8" value="">#}
-    {##}
-    {#            </td>#}
-    {##}
-    {##}
-    {#            <td class="labright">#}
-    {#                是否报备#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft">#}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input type="checkbox" id="ffe201200849806Bjn3k" name="ffe201200849806Bjn3k"></div>#}
-    {##}
-    {#            </td>#}
-    {##}
-    {#        </tr>#}
-    {##}
-    {#        </tbody>#}
-    {#    </table>#}
-    {#    <table class="cloudtab bianjibg" width="100%" border="0" cellpadding="0" cellspacing="0">#}
-    {#        <tbody>#}
-    {##}
-    {#        <tr>#}
-    {#            <td class="labright ">#}
-    {#                目前面临的问题#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft rematab" colspan="3">#}
-    {##}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <textarea id="ffe201200850319N4fm5" name="ffe201200850319N4fm5" maxlength="4000" rows="5" cols="75"#}
-    {#                              wrap="soft"></textarea></div>#}
-    {##}
-    {#            </td>#}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {#            <td class="labright ">#}
-    {#                下一步工作计划#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft rematab" colspan="3">#}
-    {##}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input type="text" size="103" maxlength="255" name="ffe201100003448Pdf6g" id="ffe201100003448Pdf6g"#}
-    {#                           value=""></div>#}
-    {##}
-    {#            </td>#}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {#            <td class="labright ">#}
-    {#                资源需求#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft rematab" colspan="3">#}
-    {##}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <textarea id="ffe201200849953xCa4y" name="ffe201200849953xCa4y" maxlength="4000" rows="5" cols="75"#}
-    {#                              wrap="soft"></textarea></div>#}
-    {##}
-    {#            </td>#}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {#            <td class="labright ">#}
-    {#                已处于本阶段几周#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft rematab" colspan="3">#}
-    {##}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input type="text" size="103" maxlength="50" name="ffe201200850342tvcyX" id="ffe201200850342tvcyX"#}
-    {#                           value=""></div>#}
-    {##}
-    {#            </td>#}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {#            <td class="labright ">#}
-    {#                何时进入下一阶段#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft rematab" colspan="3">#}
-    {##}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <input id="ffe201200850356JsoZB" class="datepicker hasDatepicker" size="20" type="text"#}
-    {#                           name="ffe201200850356JsoZB" value=""></div>#}
-    {##}
-    {#            </td>#}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {#            <td class="labright ">#}
-    {#                赢率#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft rematab" colspan="3">#}
-    {##}
-    {#                <div class="requiredInput">#}
-    {#                    <div class="requiredinfo"></div>#}
-    {#                    <textarea id="ffe201310855159PXDhf" name="ffe201310855159PXDhf" maxlength="4000" rows="5" cols="75"#}
-    {#                              wrap="soft"></textarea></div>#}
-    {##}
-    {#            </td>#}
-    {#        </tr>#}
-    {##}
-    {#        <tr>#}
-    {#            <td class="labright ">#}
-    {#                备注#}
-    {##}
-    {#            </td>#}
-    {#            <td class="lableft rematab" colspan="3">#}
-    {##}
-    {#                <textarea id="ffe201200850401JY1ZW" name="ffe201200850401JY1ZW" maxlength="4000" rows="5" cols="75"#}
-    {#                          wrap="soft"></textarea>#}
-    {##}
-    {#            </td>#}
-    {#        </tr>#}
-    {##}
-    {#        </tbody>#}
-    {#    </table>#}
-    {##}
-    {#    </div>#}
-    {#    </div>#}
-    {#    </div>#}
     </div>
     </div>
     </form>

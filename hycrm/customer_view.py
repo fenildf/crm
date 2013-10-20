@@ -4,7 +4,9 @@ from django.template.loader import get_template
 from django.template import Context
 from hycrm.authority import get_user_display_model
 from hycrm.authority import get_user_customer, create_user_customer, edit_user_customer
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='/')
 def main_customer(request):
     model_list = get_user_display_model(request.user.username)
     customer_data = get_user_customer(request.user.username)

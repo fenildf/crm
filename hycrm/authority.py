@@ -2,9 +2,9 @@
 __author__ = 'lwy'
 # 根据用户显示主页的菜单
 # 根据用户的组等来控制显示的权限
-from django.http.response import HttpResponse
-from hycrm.models import Customer, Contact,Sale_opportunity
-import json
+from hycrm.models import Customer, Contact, Sale_opportunity
+
+
 def get_user_display_model(user):
     if user == 'admin':
         user_display_model = ['main_page',
@@ -30,28 +30,21 @@ def get_user_display_model(user):
                               'main_project_apply',
                               'main_weekly_plan']
     return user_display_model
-def get_user_customer_name(item):
+
+#ajax获取客户名
+def get_user_customer_name(request):
     return Customer.objects.all().values_list('name', flat=True)
-#@todo:条件需要重新编写
-def get_user_contact_name(item):
-    return Contact.objects.all().values_list('customer_name', flat=True)
+
+#获取客户下属的联系人名
+def get_user_contact_name(request):
+    return Contact.objects.all().filter(customer_name=request.POST['name']).values_list('name', flat=True)
+
 
 # 客户
 def get_user_customer(user):
-#if user == 'admin':
     return Customer.objects.all()
-    #else:
-    #    return Customer.objects.all().filter(username=user)
-#ajax获取客户名
-def get_customer_name(request):
-    customer_name = get_user_customer_name(request)
-    print(list(customer_name))
-    return HttpResponse(json.dumps(list(customer_name), ensure_ascii=False))
 
-#获取联系人名
-def get_contact_name(request):
-    customer_name = get_user_contact_name(request)
-    return HttpResponse(json.dumps(list(customer_name), ensure_ascii=False))
+
 def create_user_customer(item):
     Customer(name=item[0],
              kind=item[1],
@@ -68,9 +61,12 @@ def edit_user_customer(item):
                                                phone=item[3],
                                                address=item[4],
                                                note=item[5])
+
 #联系人
 def get_user_contact(user):
     return Contact.objects.all()
+
+
 def create_user_contact(item):
     Contact(name=item[0],
             duty=item[1],
@@ -84,6 +80,8 @@ def create_user_contact(item):
             budget_count=item[9],
             budget_sum=item[10],
             note=item[11]).save()
+
+
 def edit_user_contact(item):
     Contact.objects.filter(id=item[0]).update(name=item[1],
                                               duty=item[2],
@@ -95,6 +93,58 @@ def edit_user_contact(item):
                                               email=item[8],
                                               note=item[9])
 
+
 def get_user_sale_opportunity(item):
     return Sale_opportunity.objects.all()
 
+
+def create_user_sale_opportunity(item):
+    Sale_opportunity(name=item[0],
+                     customer_name=item[1],
+                     contact_name=item[2],
+                     username=item[3],
+                     project_id=item[4],
+                     competitors_info=item[5],
+                     phase=item[6],
+                     project_apply_approved=item[7],
+                     recommend_products=item[8],
+                     customer_decision=item[9],
+                     projected_sales=item[10],
+                     projected_gross_profit=item[11],
+                     annual_goal_percentage=item[12],
+                     expected_tender_date=item[13],
+                     sign_Time=item[14],
+                     manufacturers_support_rate=item[15],
+                     is_filing=item[16],
+                     current_budget_sum=item[17],
+                     current_problem=item[18],
+                     following_plan=item[19],
+                     resource_Requirements=item[20],
+                     current_week=item[21],
+                     next_phase_time=item[22],
+                     success_chance=item[23],
+                     note=item[24]).save();
+
+def edit_user_sale_opportunity(item):
+    Sale_opportunity.objects.filter(id=item[0]).update(name=item[1],
+                                                       customer_name=item[2],
+                                                       contact_name=item[3],
+                                                       competitors_info=item[4],
+                                                       phase=item[5],
+                                                       project_apply_approved=item[6],
+                                                       recommend_products=item[7],
+                                                       customer_decision=item[8],
+                                                       projected_sales=item[9],
+                                                       projected_gross_profit=item[10],
+                                                       annual_goal_percentage=item[11],
+                                                       expected_tender_date=item[12],
+                                                       sign_Time=item[13],
+                                                       manufacturers_support_rate=item[14],
+                                                       is_filing=item[15],
+                                                       current_problem=item[16],
+                                                       following_plan=item[17],
+                                                       resource_Requirements=item[18],
+                                                       current_week=item[19],
+                                                       next_phase_time=item[20],
+                                                       success_chance=item[21],
+                                                       note=item[22]).save();

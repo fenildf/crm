@@ -30,22 +30,21 @@ $(document).ready(function () {
     });
     $(".datepicker").datepicker({
         numberOfMonths: 2,  //显示两个月
-        showWeek: true,
         showButtonPanel: true
-//        minDate: 0  //从当前日期起可选
     });
-    $("#select_customer_name").click(function () {
-        if ($('#select_contact_name option').size() == 1) {
-            $.ajax({
-                type: "POST",
-                url: "all_contacts",
-                dataType: 'json',
-                success: function (jsonObject) {
-                    $.each(jsonObject, function (key, val) {
-                        $("#select_contact_name").append("<option>" + val + "</option>");
-                    });
-                }
-            });
-        }
+    $("#select_customer_name").change(function () {
+//        先要清除联系人的名字
+        $("#select_contact_name").empty()
+        $.ajax({
+            type: "POST",
+            data: { name: $("#select_customer_name").val() },
+            url: "all_contacts",
+            dataType: 'json',
+            success: function (jsonObject) {
+                $.each(jsonObject, function (key, val) {
+                    $("#select_contact_name").append("<option>" + val + "</option>");
+                });
+            }
+        });
     });
 });

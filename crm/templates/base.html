@@ -45,7 +45,7 @@
     {#时间特效处理 #}
     <script src="{% static "js/datepicker-zh-cn.js" %}"></script>
     <script src="{% static "js/jquery-ui-1.10.3.custom.min.js" %}"></script>
-   <link href="{% static "css/jquery-ui-1.10.3.custom.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/jquery-ui-1.10.3.custom.min.css" %}" rel="stylesheet">
 </head>
 
 <body>
@@ -71,7 +71,7 @@
                            data-toggle="dropdown">{{ username }}
                             <b class="caret"></b></a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">退出登录</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/crm/logout/">退出登录</a></li>
                             <li role="presentation" class="divider"></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">修改密码</a></li>
                         </ul>
