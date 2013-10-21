@@ -1,7 +1,4 @@
 /**
- * Created by ThinkPad on 13-10-17.
- */
-/**
  * Created by ThinkPad on 13-10-16.
  */
 // 控制客户页面的table的点击和移动颜色，同时对应“修改客户”按钮的可用性
@@ -30,10 +27,10 @@ $(document).ready(function () {
     });
     $(".datepicker").datepicker({
         numberOfMonths: 2,  //显示两个月
-        showButtonPanel: true
+        showButtonPanel: true,
+        dateFormat: 'yy-mm-dd'
     });
     $("#select_customer_name").change(function () {
-//        先要清除联系人的名字
         $("#select_contact_name").empty()
         $.ajax({
             type: "POST",
@@ -46,5 +43,8 @@ $(document).ready(function () {
                 });
             }
         });
+    });
+    $("#edit_sale_opportunity_btn").click(function () {
+        $("#edit_sale_opportunity_id").val(current_selected + 1);
     });
 });

@@ -5,7 +5,7 @@ from django.template import Context
 from hycrm.authority import get_user_display_model
 from hycrm.authority import get_user_customer, create_user_customer, edit_user_customer
 from django.contrib.auth.decorators import login_required
-
+#@todo:customer,contact,sale_opportunity三项的创建修改等记录要保存，并能查询。
 @login_required(login_url='/')
 def main_customer(request):
     model_list = get_user_display_model(request.user.username)

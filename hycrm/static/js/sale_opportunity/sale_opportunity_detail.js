@@ -1,9 +1,3 @@
-/**
- * Created by ThinkPad on 13-10-17.
- */
-/**
- * Created by ThinkPad on 13-10-16.
- */
 // 控制客户页面的table的点击和移动颜色，同时对应“修改客户”按钮的可用性
 $(document).ready(function () {
     var current_selected = -1;

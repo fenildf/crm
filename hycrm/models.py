@@ -62,7 +62,7 @@ class Sale_opportunity(models.Model):
     projected_gross_profit = models.CharField(max_length=30)
     annual_goal_percentage = models.CharField(max_length=30)
     expected_tender_date = models.DateField()
-    sign_Time = models.DateField()
+    sign_time = models.DateField()
     manufacturers_support_rate = models.CharField(max_length=30)
     is_filing = models.BooleanField()
     current_budget_sum = models.CharField(max_length=30)

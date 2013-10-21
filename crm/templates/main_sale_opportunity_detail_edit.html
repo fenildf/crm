@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+{#显示该登录用户的联系人列表#}
+{% block sale_opportunity %}
+    <form class="form-horizontal" action="save_edit_sale_opportunity" method='post'>
+    <div class="btn-group" style="margin: 9px 0 5px;">
+        <button id="sale_opportunity_btn" class="btn" type="submit" value="save">保存</button>
+        <button id="cancel_opportunity_btn" class="btn" type="button" onclick="javascript:history.back()">取消</button>
+    </div>
+    <div class="accordion" id="accordion">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#basic_info">
+                基本信息
+            </a>
+        </div>
+        <div id="basic_info" class="accordion-body collapse in">
+            <div class="accordion-inner">
+                <div id="basic_info" class="collapse in">
+                    <div class="row">
+                        <div class="span5">
+                            <div class="control-group">
+                                <input  type=text style="display:none" name=id value = {{ sale_opportunity_data.id }}>
+                                <label class="control-label">业务机会名称</label>
+
+                                <div class="controls">
+                                    <input type="text" placeholder="业务机会名称" name='name'
+                                           value= {{ sale_opportunity_data.name }}>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">所有人: </label>
+
+                                <div class="controls">
+                                    <label class="control-label"
+                                           style="text-align : left">{{ sale_opportunity_data.username }}</label>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">项目编号: </label>
+
+                                <div class="controls">
+                                    <label class="control-label"
+                                           style="text-align : left">{{ sale_opportunity_data.project_id }}</label>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">客户名称</label>
+
+                                <div class="controls">
+                                    <select id="select_customer_name" class="input-block-level span3"
+                                            name=customer_name value= {{ sale_opportunity_data.customer_name }}>
+                                        {% for item in customer_data %}
+                                            <option>{{ item }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">阶段</label>
+
+                                <div class="controls">
+                                    <select class="input-block-level span3" name=phase
+                                            value= {{ sale_opportunity_data.phasse }}>
+                                        <option>1. 主观打算、主观计划</option>
+                                        <option>2. 信息发现</option>
+                                        <option>3. 立项</option>
+                                        <option>4. 实质操作</option>
+                                        <option>5. 投标及商务谈判</option>
+                                        <option>6. 签单</option>
+                                        <option>7. 丢标、弃标</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">联系人</label>
+
+                                <div class="controls">
+                                    <select id="select_contact_name" class="input-block-level span3" name=contact_name>
+                                        <option>{{ sale_opportunity_data.contact_name }}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">是否立项审批</label>
+
+                                <div class="controls">
+                                    <input type="checkbox" name=project_apply_approved
+                                           checked={{ sale_opportunity_data.project_apply_approved }}>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span7">
+                            <div class="control-group">
+                                <label class="control-label" for="description">竞争对手分析</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="5"
+                                              placeholder="该业务机会竞争对手分析"
+                                              name=competitors_info> {{ sale_opportunity_data.competitors_info }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="description">推荐产品</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="5"
+                                              placeholder="该业务机会推荐产品"
+                                              name=recommend_products>{{ sale_opportunity_data.recommend_products }}</textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">客户决策链</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="5"
+                                              placeholder="描写该业务机会客户决策链"
+                                              name=customer_decision>{{ sale_opportunity_data.customer_decision }}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#    -----------------------------------------------------------------------------------------------------------#}
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#project_info">
+                项目信息
+            </a>
+        </div>
+        <div id="project_info" class="accordion-body collapse in">
+            <div class="accordion-inner">
+                <div id="project_info" class="collapse in">
+
+
+                    <div class="row">
+                        <div class="span5">
+                            <div class="control-group">
+                                <label class="control-label">预计销售额（万）</label>
+
+                                <div class="controls">
+                                    <input type="text" placeholder="预计销售额（以万为单位）" name=projected_sales
+                                           value= {{ sale_opportunity_data.projected_sales }}>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">预计招标日期</label>
+
+                                <div class="controls">
+                                    <input type="text" class="datepicker" placeholder="预计招标日期"
+                                           name=expected_tender_date
+                                           value={{ sale_opportunity_data.expected_tender_date }}>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">预计毛利</label>
+
+                                <div class="controls">
+                                    <input type="text" placeholder="预计毛利" name=projected_gross_profit
+                                           value={{ sale_opportunity_data.projected_gross_profit }}>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">签约时间</label>
+
+                                <div class="controls">
+                                    <input type="text" class="datepicker" placeholder="签约时间"
+                                           name=sign_time value={{ sale_opportunity_data.sign_time }}>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">占年度目标比例</label>
+
+                                <div class="controls">
+                                    <input type="text" placeholder="占年度目标比例" name=annual_goal_percentage
+                                           value={{ sale_opportunity_data.annual_goal_percentage }}>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">厂家支持率</label>
+
+                                <div class="controls">
+                                    <input type="text" placeholder="厂家支持率" name=manufacturers_support_rate
+                                           value={{ sale_opportunity_data.manufacturers_support_rate }}>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">目前费用总和 </label>
+
+                                <div class="controls">
+                                    <label class="control-label"
+                                           style="text-align : left">{{ sale_opportunity_data.current_budget_sum }}</label>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">是否报备</label>
+
+                                <div class="controls">
+                                    <input type="checkbox" name=is_filing value="" checked={{ sale_opportunity_data.is_filing }}>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span7">
+                            <div class="control-group">
+                                <label class="control-label" for="description">目前面临的问题</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="5"
+                                              placeholder="该业务机会目前面临的问题"
+                                              name=current_problem>{{ sale_opportunity_data.current_problem }}</textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">下一步工作计划</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="1"
+                                              placeholder="该业务机会下一步工作计划"
+                                              name=following_plan>{{ sale_opportunity_data.following_plan }}</textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">资源需求</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="5"
+                                              placeholder="描写该业务机会资源需求"
+                                              name=resource_Requirements>{{ sale_opportunity_data.resource_Requirements }}</textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">已处于本阶段几周</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="1"
+                                              placeholder="该业务机会已处于本阶段几周"
+                                              name=current_week>{{ sale_opportunity_data.current_week }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="description">何时进入下一阶段</label>
+
+                                <div class="controls">
+                                    <input type="text" class="datepicker" placeholder="何时进入下一阶段" name=next_phase_time
+                                           value={{ sale_opportunity_data.next_phase_time }}>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">赢率</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="4"
+                                              placeholder="赢率"
+                                              name=success_chance>{{ sale_opportunity_data.success_chance }}</textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="description">备注</label>
+
+                                <div class="controls">
+                                    <textarea class="span6" rows="3"
+                                              placeholder="备注" name=note>{{ sale_opportunity_data.note }}</textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </form>
+{% endblock %}

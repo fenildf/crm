@@ -92,11 +92,11 @@ def edit_user_contact(item):
                                               mobile=item[7],
                                               email=item[8],
                                               note=item[9])
-
-
 def get_user_sale_opportunity(item):
     return Sale_opportunity.objects.all()
 
+def get_user_sale_opportunity_byid(request):
+    return Sale_opportunity.objects.filter(id = request.POST.get('id')).all()
 
 def create_user_sale_opportunity(item):
     Sale_opportunity(name=item[0],
@@ -113,7 +113,7 @@ def create_user_sale_opportunity(item):
                      projected_gross_profit=item[11],
                      annual_goal_percentage=item[12],
                      expected_tender_date=item[13],
-                     sign_Time=item[14],
+                     sign_time=item[14],
                      manufacturers_support_rate=item[15],
                      is_filing=item[16],
                      current_budget_sum=item[17],
@@ -126,6 +126,7 @@ def create_user_sale_opportunity(item):
                      note=item[24]).save();
 
 def edit_user_sale_opportunity(item):
+    print(item[0])
     Sale_opportunity.objects.filter(id=item[0]).update(name=item[1],
                                                        customer_name=item[2],
                                                        contact_name=item[3],
@@ -138,7 +139,7 @@ def edit_user_sale_opportunity(item):
                                                        projected_gross_profit=item[10],
                                                        annual_goal_percentage=item[11],
                                                        expected_tender_date=item[12],
-                                                       sign_Time=item[13],
+                                                       sign_time=item[13],
                                                        manufacturers_support_rate=item[14],
                                                        is_filing=item[15],
                                                        current_problem=item[16],
@@ -147,4 +148,4 @@ def edit_user_sale_opportunity(item):
                                                        current_week=item[19],
                                                        next_phase_time=item[20],
                                                        success_chance=item[21],
-                                                       note=item[22]).save();
+                                                       note=item[22])

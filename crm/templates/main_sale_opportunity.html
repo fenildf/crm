@@ -4,11 +4,13 @@
 {% block model_func %}
 
     <div class="btn-group" style="margin: 9px 0 5px;">
-        <form style=" display:inline" class = "input-prepend" action="{% url "hycrm.sale_opportunity_view.new_sale_opportunity" %}" method='post'>
+        <form style=" display:inline" class = "input-prepend" action="new_sale_opportunity/" method='post'>
             <input id="new_sale_opportunity_btn" class="btn" type="submit" value="新增业务机会">
         </form>
-        <form style=" display:inline"  class = "input-append" action="{% url "hycrm.sale_opportunity_view.edit_sale_opportunity" %}" method='post'>
+        <form style=" display:inline"  class = "input-append" action="edit_sale_opportunity/" method='post'>
             <input id="edit_sale_opportunity_btn" class="btn" type="submit" value="业务机会明细">
+{#            在表单提交时把id传过去,在服务器进行渲染#}
+            <input id="edit_sale_opportunity_id" type=text style="display:none" name=id>
         </form>
     </div>
 
@@ -30,9 +32,16 @@
             <td>{{ item.customer_name }}</td>
             <td>{{ item.phase }}</td>
             <td>{{ item.projected_sales }}</td>
-            <td>{{ item.sign_Time }}</td>
+            <td>{{ item.sign_time }}</td>
             </tr>
         {% endfor %}
+{#            <td>{{ sale_opportunity_data.id }}</td>#}
+{#            <td>{{ sale_opportunity_data.name }}</td>#}
+{#            <td>{{ sale_opportunity_data.customer_name }}</td>#}
+{#            <td>{{ sale_opportunity_data.phase }}</td>#}
+{#            <td>{{ sale_opportunity_data.projected_sales }}</td>#}
+{#            <td>{{ sale_opportunity_data.sign_time }}</td>#}
+{#            </tr>#}
         </tbody>
     </table>
 {% endblock %}
